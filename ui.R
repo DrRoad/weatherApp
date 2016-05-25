@@ -21,8 +21,12 @@ shinyUI(fluidPage(
                   choices = list("Temperature", "Dewpoint",
                                  "WindSpeed", "Pressure",
                                  "Density"),
-                  selected = "Temperature")
-      ),
+                  selected = "Temperature"),
+    p("Please use the above to select the date rate you would like to look at.
+      Use the selector below to choose which quantity to view."),
+    p("Allowed span only 2015."),
+    p("The possible selections for data type are Temperature, Dewpoint, Wind Speed, Pressure, and Density. All but Density are from weather.gov, the density is calculated from the other quantities.")
+    ),
 
     mainPanel(
       plotOutput("varPlot")
